@@ -1,13 +1,16 @@
 from bs4 import BeautifulSoup
 from httplib2 import Http
 import os
+import sys
+import datetime
+import time
 
 http = Http()
 
 if len(sys.argv) > 1:
     DATE_DIR = sys.argv[1]
 else:
-    DATE_DIR = datetime.strftime(datetime.datetime.now(), "%Y%m")
+    DATE_DIR = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m")
 
 DUMP_DIR = os.path.join("BoardGameGeek.xml", DATE_DIR)
 

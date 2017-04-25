@@ -2,11 +2,13 @@ from httplib2 import Http
 import os
 import re
 import time
+import sys
+import datetime
 
 if len(sys.argv) > 1:
     DATE_DIR = sys.argv[1]
 else:
-    DATE_DIR = datetime.strftime(datetime.datetime.now(), "%Y%m")
+    DATE_DIR = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m")
 
 DUMP_DIR = os.path.join("BoardGameGeek.xml", DATE_DIR)
 
@@ -22,7 +24,7 @@ for d in GAME_OUTPUT_DIRECTORY, GEEKLIST_OUTPUT_DIRECTORY:
 
 BATCH_SIZE = 20
 
-BOARDGAME_URL = "http://boardgamegeek.com/xmlapi/boardgame/%s?comments=1&stats=1"
+BOARDGAME_URL = "http://boardgamegeek.com/xmlapi/boardgame/%s?comments=0&stats=1"
 GEEKLIST_URL = "http://boardgamegeek.com/xmlapi/geeklist/%s?comments=1"
 
 http = Http()
