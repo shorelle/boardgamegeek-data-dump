@@ -1,3 +1,5 @@
 lxml
 beautifulsoup
 jsonpickle
+xmltodict
+pymongo

@@ -1,3 +1,9 @@
+### Fork changes
+
+Added script to save board game data in local MongoDB database (run `python 5-database.py` after `2-crawl.py`)
+
+Requires additional [xmltodict](https://github.com/martinblech/xmltodict) and [pymongo](https://api.mongodb.com/python/current/) modules
+
 Board Game Geek data dump scripts
 =================================
 
